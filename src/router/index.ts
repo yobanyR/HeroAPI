@@ -14,6 +14,13 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: '/hero-list',
+    component: () => import('../components/HeroList.vue'),
+    meta: {
+      title: 'Detalles del Superhéroe',
+    },
+  },
+  {
     path: '/hero-details/:id',
     component: () => import('../views/HeroDetailsView.vue'),
     meta: {
@@ -22,6 +29,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/battle',
+    name: 'battle',
     component: () => import('../views/BattleView.vue'),
     meta: {
       title: 'Batalla de Superhéroes',

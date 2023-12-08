@@ -4,7 +4,7 @@
       <div class="hero-content">
         <ion-img :src="heroImage(hero)" alt="Hero Image" class="hero-image"></ion-img>
         <ion-card-content class="hero-details">
-          <ion-card-title class="hero-name">{{ hero.name }}</ion-card-title>
+          <ion-card-title class="hero-name">{{ hero.name.toUpperCase() }}</ion-card-title>
         </ion-card-content>
       </div>
     </ion-card>
@@ -52,10 +52,13 @@ export default {
 </script>
 
 <style scoped>
+
 .heroes-container {
   display: flex;
+  background-color: #789BFF;
+
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .hero-card {
@@ -85,7 +88,8 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 10px;
+  padding: 2px;
+  padding-top: 14px;
   text-align: center;
 }
 
@@ -93,6 +97,7 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-size: 16px;
+  widows: 100%;
   padding: 6px; /* Añade relleno según sea necesario */
 }
 
